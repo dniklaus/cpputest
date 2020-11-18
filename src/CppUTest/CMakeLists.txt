@@ -1,30 +1,29 @@
 add_library(CppUTest
-        CommandLineArguments.cpp
-        MemoryLeakWarningPlugin.cpp
-        TestHarness_c.cpp
-        TestRegistry.cpp
-        CommandLineTestRunner.cpp
-        SimpleString.cpp
-        SimpleStringInternalCache.cpp
-        TestMemoryAllocator.cpp
-        TestResult.cpp
-        JUnitTestOutput.cpp
-        TeamCityTestOutput.cpp
-        TestFailure.cpp
-        TestOutput.cpp
-        MemoryLeakDetector.cpp
-        TestFilter.cpp
-        TestPlugin.cpp
-        TestTestingFixture.cpp
-        SimpleMutex.cpp
-        Utest.cpp
+    CommandLineArguments.cpp
+    CommandLineTestRunner.cpp
+    JUnitTestOutput.cpp
+    MemoryLeakDetector.cpp
+    MemoryLeakWarningPlugin.cpp
+    SimpleMutex.cpp
+    SimpleString.cpp
+    TeamCityTestOutput.cpp
+    TestFailure.cpp
+    TestFilter.cpp
+    TestHarness_c.cpp
+    TestMemoryAllocator.cpp
+    TestOutput.cpp
+    TestPlugin.cpp
+    TestRegistry.cpp
+    TestResult.cpp
+    TestTestingFixture.cpp
+    Utest.cpp
 )
 
 #[[Set CPP_PLATFORM in a parent CMakeLists.txt if reusing one of the provided platforms, else supply the missing definitions]]
 if (CPP_PLATFORM)
     target_sources(CppUTest
         PRIVATE
-            ../Platforms/${CPP_PLATFORM}/UtestPlatform.cpp
+            ${CMAKE_CURRENT_LIST_DIR}/../Platforms/${CPP_PLATFORM}/UtestPlatform.cpp
     )
 endif(CPP_PLATFORM)
 

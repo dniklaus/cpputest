@@ -1,43 +1,39 @@
 set(CppUTestExt_src
         CodeMemoryReportFormatter.cpp
-        GTest.cpp
-        IEEE754ExceptionsPlugin.cpp
-        MemoryReporterPlugin.cpp
-        MockFailure.cpp
-        MockSupportPlugin.cpp
-        MockActualCall.cpp
-        MockSupport_c.cpp
         MemoryReportAllocator.cpp
-        MockExpectedCall.cpp
-        MockNamedValue.cpp
-        OrderedTest.cpp
         MemoryReportFormatter.cpp
+        MemoryReporterPlugin.cpp
+        MockActualCall.cpp
+        MockExpectedCall.cpp
         MockExpectedCallsList.cpp
+        MockFailure.cpp
+        MockNamedValue.cpp
         MockSupport.cpp
+        MockSupportPlugin.cpp
+        MockSupport_c.cpp
+        OrderedTest.cpp
 )
 
 set(CppUTestExt_headers
         ${CppUTestRootDirectory}/include/CppUTestExt/CodeMemoryReportFormatter.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/IEEE754ExceptionsPlugin.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReportAllocator.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockExpectedCall.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockCheckedExpectedCall.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockExpectedCallsList.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupportPlugin.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReportFormatter.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockFailure.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport_c.h
         ${CppUTestRootDirectory}/include/CppUTestExt/GMock.h
         ${CppUTestRootDirectory}/include/CppUTestExt/GTest.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/GTestSupport.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReporterPlugin.h
-        ${CppUTestRootDirectory}/include/CppUTestExt/OrderedTest.h
         ${CppUTestRootDirectory}/include/CppUTestExt/GTestConvertor.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReportAllocator.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReportFormatter.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MemoryReporterPlugin.h
         ${CppUTestRootDirectory}/include/CppUTestExt/MockActualCall.h
         ${CppUTestRootDirectory}/include/CppUTestExt/MockCheckedActualCall.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockCheckedExpectedCall.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockExpectedCall.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockExpectedCallsList.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockFailure.h
         ${CppUTestRootDirectory}/include/CppUTestExt/MockNamedValue.h
         ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupportPlugin.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport_c.h
+        ${CppUTestRootDirectory}/include/CppUTestExt/OrderedTest.h
 )
 
 add_library(CppUTestExt STATIC ${CppUTestExt_src} ${CppUTestExt_headers})

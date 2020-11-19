@@ -6,6 +6,7 @@ add_library(CppUTest
     MemoryLeakWarningPlugin.cpp
     SimpleMutex.cpp
     SimpleString.cpp
+    SimpleStringInternalCache.cpp
     TeamCityTestOutput.cpp
     TestFailure.cpp
     TestFilter.cpp
